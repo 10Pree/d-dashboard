@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>Login</h1>
+      <h1>Register</h1>
       <div>
           <input type="text" name="" id="">
           <button class="btn btn-primary">Primary Button</button>
