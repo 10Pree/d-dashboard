@@ -4,14 +4,13 @@
     <div>
         <input type="text" name="" id="">
         <button class="btn btn-primary">Primary Button</button>
+        <i class="fas fa-home"></i>
     </div>
   </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>
