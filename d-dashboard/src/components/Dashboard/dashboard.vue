@@ -3,7 +3,7 @@
     <aside>
       <div class="sidebar shadow-sm">
         <div class=" d-flex justify-content-center  align-items-center logo">
-          <img src="../../assets/images/logo_1.png" style=" width: 150px;" alt="">
+          <img src="../../assets/images/logo_1.png" style=" width: 80px;" alt="">
         </div>
         <ul class="sidebar-nav list-unstyled">
           <li class="nav-item">
