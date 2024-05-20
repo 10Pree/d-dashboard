@@ -1,7 +1,9 @@
 <template>
   <div class="w-100 d-flex justify-content-center align-items-center" style="height: 100vh">
-    <form class="w-25 border border-1 rounded shadow-sm align-items-center p-3" style="height: 400px;" action="">
-      <h1 class=" text-center">LOGIN</h1>
+    <form class=" container-fluid  w-25 border border-1 rounded shadow-sm align-items-center p-6" style="height: 400px;" action="">
+      <div class=" d-flex justify-content-center w-100 mt-1" key="">
+        <img  src="../../assets/images/logo_1.png" style=" width: 100px;" alt="">
+      </div>
       <div class=" m-2">
         <label class=" form-label d-block" for="">Username</label>
         <input class=" form-control" type="text" />
@@ -31,4 +33,11 @@
 
 <script></script>
 
-<style></style>
+<style>
+img{
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+
+}
+</style>
