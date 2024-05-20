@@ -1,19 +1,34 @@
 <template>
-  <div>
-    <h1>Login</h1>
-    <div>
-      <img src="../src/assets/images/logo_1.png" alt="Logo">
-        <input type="text" name="" id="">
-        <button class="btn btn-primary">Primary Button</button>
-        <i class="fas fa-home"></i>
-    </div>
+  <div class="w-100 d-flex justify-content-center align-items-center" style="height: 100vh">
+    <form class="w-25 border border-1 rounded shadow-sm align-items-center p-3" style="height: 400px;" action="">
+      <h1 class=" text-center">LOGIN</h1>
+      <div class=" m-2">
+        <label class=" form-label d-block" for="">Username</label>
+        <input class=" form-control" type="text" />
+      </div>
+      <div class=" m-2">
+        <label class=" form-label d-block" for="">Password</label>
+        <input class=" form-control" type="password" name="password" />
+      </div>
+      <div class=" m-2">
+        <button class=" btn btn-primary w-100" type="submit">เข้าสู่ระบบ</button>
+      </div>
+      <div class="d-flex justify-content-between align-items-center m-2">
+        <div>
+          <input type="checkbox" />
+          <small>จำรหัสไว้</small>
+        </div>
+        <div>
+          <a href="#">ลืมรหัส</a>
+        </div>
+      </div>
+      <div class=" m-2 mt-4 ">
+        <a class=" btn btn-outline-primary w-100" >สมัคร สมาชิก</a>
+      </div>
+    </form>
   </div>
 </template>
 
-<script>
+<script></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>
