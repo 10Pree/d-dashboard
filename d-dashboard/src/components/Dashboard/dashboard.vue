@@ -9,22 +9,22 @@
           <li class="nav-item">
             <a class=" btn btn-outline-primary border-0" href="#">
               <i class="fa fa-dashboard px-2" aria-hidden="true"></i>
-              <span> HOME</span>
+              <span>Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class=" btn btn-outline-primary border-0" href="#">
               <i class="fa-solid fa-cart-shopping px-2"></i>
-              <span> HOME</span>
+              <span>HOME</span>
             </a>
           </li>
           <li class="nav-item ">
             <a class=" btn btn-outline-primary border-0" href="#">
               <i class="fa-solid fa-users px-2"></i>
-              <span> HOME</span>
+              <span>Admin</span>
             </a>
           </li>
-        <li class="nav-item last-manu-out">
+        <li class="nav-item last-menu-out">
             <a class=" btn btn-outline-primary border-0" href="./Login/login.vue">
               <i class="fa fa-sign-out px-2" aria-hidden="true"></i>
               <span>ออกจากระบบ</span>
@@ -61,7 +61,7 @@ export default {};
   text-align: left;
   font-weight: 500;
 }
-.last-manu-out{
+.last-menu-out{
     bottom: 50px;
     width: 100%;
     color: brown;
