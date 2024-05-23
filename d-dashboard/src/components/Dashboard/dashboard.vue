@@ -1,5 +1,5 @@
 <script setup>
-import MainContent from "./MainContent.vue";
+import MainContant from "./MainContent.vue";
 
 </script>
 <template>
@@ -46,7 +46,7 @@ import MainContent from "./MainContent.vue";
     </aside>
 
     <!-- Main -->
-    <MainContent/>
+    <MainContant/>
   </div>
 </template>
 
@@ -81,5 +81,14 @@ import MainContent from "./MainContent.vue";
 
 .logo {
   height: 100px;
+}
+/* .main-contant {
+  background: rgb(241, 241, 241);
+  border-radius: 20px;
+  overflow-y: auto;
+  padding: 50px;
+} */
+.icon-user {
+  color: aqua;
 }
 </style>
