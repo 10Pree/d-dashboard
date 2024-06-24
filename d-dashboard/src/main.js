@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './Router/router';
 
 // สำหรับ Font Awesome
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -19,6 +20,9 @@ app.use('@fortawesome/fontawesome-free/css/all.css')
 
 // นำเข้า Material Icons
 app.use('@mdi/font/css/materialdesignicons.css')
+
+// เพิ่ม Vue Router
+app.use(router)
 
 // เปิดการใช้งานแอปพลิเคชัน
 app.mount('#app')

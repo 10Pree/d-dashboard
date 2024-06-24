@@ -3,6 +3,6 @@ import dashboard from "./components/Dashboard/dashboard.vue";
 import Login from "./components/Login/login.vue";
 </script>
 <template>
-  <dashboard />
+      <router-view></router-view>
 </template>
 <style></style>

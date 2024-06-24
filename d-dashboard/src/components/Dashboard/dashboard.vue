@@ -1,6 +1,5 @@
 <script setup>
 import MainContent from "./MainContent.vue";
-
 </script>
 <template>
   <div class="w-100 d-flex gap-2" style="height: 100vh">
@@ -15,38 +14,41 @@ import MainContent from "./MainContent.vue";
         </div>
         <ul class="sidebar-nav list-unstyled">
           <li class="nav-item">
-            <a class="btn btn-outline-primary border-0" href="#">
+            <router-link
+              class="btn btn-outline-primary border-0"
+              to="/dashboard"
+            >
               <i class="fa fa-dashboard px-2" aria-hidden="true"></i>
               <span>Dashboard</span>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-primary border-0" href="#">
+            <router-link
+              class="btn btn-outline-primary border-0"
+              to="/dashboard"
+            >
               <i class="fa-solid fa-cart-shopping px-2"></i>
               <span>HOME</span>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-primary border-0" href="#">
+            <router-link class="btn btn-outline-primary border-0" to="/login">
               <i class="fa-solid fa-users px-2"></i>
               <span>Admin</span>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item last-menu-out">
-            <a
-              class="btn btn-outline-primary border-0"
-              href="./Login/login.vue"
-            >
-              <i class="fa fa-sign-out px-2" aria-hidden="true"></i>
+            <router-link to="/login">
+                <i class="fa fa-sign-out px-2" aria-hidden="true"></i>
               <span>ออกจากระบบ</span>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
     </aside>
 
     <!-- Main -->
-    <MainContent/>
+    <MainContent />
   </div>
 </template>
 

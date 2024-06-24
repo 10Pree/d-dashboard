@@ -1,0 +1,27 @@
+# ใช้ Alpine 3.20 ในขั้นตอนการ build
+FROM alpine:3.20 AS build
+
+# ติดตั้ง Go ในขั้นตอนการ build
+RUN apk add --no-cache go
+
+WORKDIR /app
+
+# คัดลอกโค้ดทั้งหมดไปยังโฟลเดอร์ /app
+COPY . /app/
+
+# สร้าง binary ของ Go
+RUN go build -o main main.go
+
+# สร้างภาพที่เล็กที่สุดจาก Alpine 3.20
+FROM alpine:3.20
+
+WORKDIR /app
+
+# คัดลอก binary ที่สร้างขึ้นมาจากขั้นตอนการ build
+COPY --from=build /app/main .
+
+# เปิดพอร์ต 8080
+EXPOSE 8080
+
+# คำสั่งเพื่อรันแอปพลิเคชัน
+CMD [ "/app/main" ]

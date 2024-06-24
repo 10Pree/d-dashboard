@@ -1,0 +1,16 @@
+# services:
+#   db:
+#     image: mysql:8.4.0
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: root # กำหนด user ของ root mysql
+#       MYSQL_DATABASE: tutorial # กำหนด database เริ่มต้นของ mysql
+#     ports:
+#       - "3306:3306"
+#   phpmyadmin:
+#     image: phpmyadmin
+#     restart: always
+#     ports:
+#       - 8000:80
+#     environment:
+#       - PMA_ARBITRARY=1

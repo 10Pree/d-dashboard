@@ -2,23 +2,23 @@
   <div class="register-container">
     <div class="register">
       <h2 class="text-center">Register</h2>
-      <form @submit.prevent="handleSubmit">
+      <form @submit.prevent="submitForm">
         <div class="form-group">
           <label for="username">Username:</label>
-          <input type="text" id="username" v-model="username" required />
+          <input type="text" id="username" v-model="user.username" required />
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" v-model="email" required />
+          <input type="email" id="email" v-model="user.email" required />
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
-          <input type="password" id="password" v-model="password" required />
+          <input type="password" id="password" v-model="user.password" required />
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="confirmPassword">Confirm Password:</label>
           <input type="password" id="confirmPassword" v-model="confirmPassword" required />
-        </div>
+        </div> -->
         <button class="btn btn-primary">Register</button>
       </form>
     </div>
@@ -29,20 +29,34 @@
 export default {
   data() {
     return {
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
+      user: {
+        username: "",
+        email: "",
+        password: ""
+      }
     };
   },
   methods: {
-    handleSubmit() {
-      if (this.password !== this.confirmPassword) {
-        alert("Passwords do not match!");
-        return;
+    async submitForm() {
+      try {
+        const response = await fetch("http://localhost:8080/api/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(this.user)
+        });
+        if (response.ok) {
+          alert("User added successfully!");
+          this.user.username = "";
+          this.user.email = "";
+          this.user.password = "";
+        } else {
+          alert("Failed to add user");
+        }
+      } catch (error) {
+        console.error("Error:", error);
       }
-      // Handle registration logic here
-      alert(`Registered with Username: ${this.username}, Email: ${this.email}`);
     }
   }
 };
